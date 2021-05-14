@@ -1,0 +1,350 @@
+@media screen and (min-width: 800px) { /*The following CSS runs only for displays with a width (in pixels) of more than 800px*/
+  *{
+  box-sizing: border-box;
+  }
+  body{
+    margin:0px;
+    padding: 0px;
+    font: poppins;
+  }
+
+  #main{
+    width:100%;;
+    height: 10vh;
+  }
+
+  nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(226, 220, 207);
+    box-shadow: 5px 10px 30px rgba(0,0,0,0.02);
+    z-index: 1;
+  }
+
+  .brand{
+    font-size: 70px;
+  }
+
+  .menu{
+    list-style: none;
+    display: flex;
+    
+  }
+
+  .menu li a{
+    width:100%;
+    height: 40px;
+    line-height: 43px;
+    margin: 3px;
+    padding-top: 10px;
+    padding: 0px 22px;
+    display: flex;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: grey;
+  }
+
+  .menu li a:hover{
+    border-radius: 10px;
+    background-color: #7a5ff1b6;
+    color: white;
+    box-shadow: 5px 10px 30px rgba(24,139,119,0.21);
+    transition: all ease 0.2s;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  /*Navbar Ends Here*/ 
+
+  .tm-container{
+    width:100%;
+    height: 100%;
+    margin-top: 30px;
+  }
+
+  .btn {
+    align-items: center;
+    background-color: inherit;
+    padding: 50% 28px;
+    font-size: 80px;
+    cursor: pointer;
+  }
+
+  .btn-transfer{
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    right: 50%;  
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    padding: 1.2rem 1.2rem;
+    background-color: rgb(78, 153, 223)!important;
+    color: #fff!important;
+    padding: 0.75rem;
+    border-radius:10px;
+    transition: all 0.3s;
+    border: black;
+    border-block-end-width: 100px;
+  }
+
+  .btn-transfer:hover{
+      background-color: rgb(67, 83, 230)!important;
+  }
+
+  /*-------------------------TABLE----------------------------*/
+  .container {
+  width: 100%;
+  display: table;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 2em;
+  }
+
+  .table-responsive{
+  background-color: whitesmoke;
+  font-weight: bold;
+  font-size: 19px;
+  align-items: center;
+  overflow-x:auto;
+  padding: 5rem 3rem;
+  margin-left: 10px;
+  }
+
+  .table{
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    border: 1px solid black;
+  }
+
+  .table-danger{
+    background-color: blueviolet;
+    color: white;
+    padding-top: 2em;
+    margin-bottom: 2em;
+    font-size: 25px;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .table-info{
+  background-color: #FFFF99;
+  }
+
+  /*----------------MODAL------------------------*/
+  .modal-title{
+    color: burlywood;
+    margin-top: 0%;
+    margin-bottom: 3%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+/*=================================================
+                                                  ============================================*/
+
+@media screen and (max-width: 800px) { /*The following CSS runs only for displays with a width (in pixels) of less than 800px*/
+  body{
+    width: 456px;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    font: poppins;
+    background-color: burlywood;
+  }
+
+  #main{
+  width: 100%;
+  height: 20vh;
+  position: relative;
+  }
+
+  nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(226, 220, 207);
+    box-shadow: 5px 10px 30px rgba(0,0,0,0.02);
+    z-index: 1;
+  }
+
+  .brand{
+    font-size: 50px;
+    padding-left: 10px;
+  }
+  .menu{
+    width: 100%;
+    list-style: none;
+    display: flex; 
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .menu-transfer{
+    font-size: 10px;
+  }
+
+  .menu li a{
+    height: 40px;
+    line-height: 43px;
+    margin: 2px;
+    padding: 0px 8px;
+    display: flex;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: #7a5ff1b6;
+    color: white;
+    box-shadow: 5px 10px 30px rgba(24,139,119,0.21);
+    border-radius: 10px;
+  }
+
+  .links{
+    background-color: #008cba;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 9%;
+  }
+  /* navbar Ende here*/
+  .tm-container{
+    width:100%;
+    height: 100%;
+    margin-top: 30px;
+  }
+
+  .btn {
+    align-items: center;
+    background-color: inherit;
+    padding: 50% 28px;
+    font-size: 80px;
+    cursor: pointer;
+  }
+
+  .btn-transfer{
+    margin-left: 15%;
+    margin-bottom: 70%;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    right: 50%;  
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    background-color: rgb(78, 153, 223)!important;
+    color: #fff!important;
+    padding: 0.75rem;
+    border-radius:10px;
+    transition: all 0.3s;
+    border: black;
+    border-block-end-width: 100px;
+  }
+
+  .btn-transfer:hover{
+      background-color: rgb(67, 83, 230)!important;
+  }
+
+  /*-------------------------TABLE----------------------------*/
+  .container {
+  width: 100%;
+  display: table;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 0em;
+  }
+
+  .table-responsive{
+    margin-top: 20%;
+    background-color: whitesmoke;
+    font-weight: bold;
+    font-size: 19px;
+    align-items: center;
+    overflow-x:auto;
+    padding: 0rem 0rem;
+    margin-left: 0px;
+    margin-bottom: 50%;
+  }
+
+  .table{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    border: 1px solid black;
+  }
+
+  .table-danger{
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+  }
+
+  th, td {
+    padding: 5px;
+    text-align: center;
+  }
+
+  .table-info{
+  background-color: #FFFF99;
+  }
+
+
+
+  /*----------------MODAL------------------------*/
+  .modal-title{
+    color: burlywood;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /*.text-center{
+    width:457px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 1px;
+    bottom: 0;
+  }*/
+}
+
+
+
+  
+  
+
+
+  
