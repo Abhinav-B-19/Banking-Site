@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SKB</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+    <link href="style2.css" rel="stylesheet" />
+    <link href="modal.css", rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!--Navbar Starts Here-->
+  <section id="main">
+      <nav>
+        <a class="brand" href="./index.html">SKB</a>
+        <span class="menu-space"></span>
+        <ul class="menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="https://banking-site.abhinavb191.repl.co/index.html#about">About</a></li>
+          <li><a href="./customers.html">Customers</a></li>
+          <li><a href="./transfer.html">Transaction</a></li>
+        </ul>
+      </nav>
+    </section>
+  <!-- navbar ends here  -->
+
+  <div class="tm-container">
+        <div>
+            <br>
+            <!--table-->
+            <div class="container">
+                    <button class="btn btn-primary btn-transfer" data-toggle="modal" data-target="#sendMoney" style="font-size:30px">Transfer Amount</button>
+                <div class="table-responsive">
+                    <table id="myTable" class="table table-hover table-bordered">
+                        <thead>
+                            <tr class="table-danger">
+                                <th scope="col">Transfer From</th>
+                                <th scope="col">Transfer To</th>
+                                <th scope="col">Amount Transfered(Rs)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-light">
+                                <td>vikas kumar</td>
+                                <td>neeraj kumar</td>
+                                <td><p id="Balance">5000</p></td>
+                            </tr>
+                            <tr class="table-info">
+                                <td>anjali saini</td>
+                                <td>palak gupta</td>
+                                <td><p id="Balance">15000</p></td>
+                            </tr>
+                            <tr class="table-light">
+                                <td>ajay kumar</td>
+                                <td>ankit kumar</td>
+                                <td><p id="Balance">8000</p></td>
+                            </tr>
+                            <tr class="table-info">
+                                <td>naina upadhyay</td>
+                                <td>pratima singh</td>
+                                <td><p id="Balance">9000</p></td>
+                            </tr>
+                            <tr class="table-light">
+                                <td>sneha singh</td>
+                                <td>akansha sinha</td>
+                                <td><p id="Balance">6500</p></td>
+                            </tr>
+                            <tr class="table-info">
+                                <td>vikas kumar</td>
+                                <td>sneha singh</td>
+                                <td><p id="roshniBalance">58000</p></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                            <!-- Modal send money -->
+                            <div class="modal fade" id="sendMoney" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Transfer Amount</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form method="post" onsubmit="return sendMoney();">
+                                            <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Transfer From</span>
+                                                        <input type="text" id="TransferFrom" list="names" class="form-control text-dark" placeholder="Enter the First Name" aria-label="username1" aria-describedby="basic-addon2">
+                                                        <datalist id="names">
+                                                          <option value="Gokul Kumar">
+                                                          <option value="Naina Upadhyay">
+                                                          <option value="Mahendra Singh">
+                                                          <option value="Anjali Saini">
+                                                          <option value="Arun">
+                                                          <option value="Pranev Kumar">
+                                                          <option value="Pavithra">
+                                                          <option value="Ajith Kumar">
+                                                          <option value="Abhi Kumar">
+                                                          <option value="Madhu">
+                                                        </datalist>
+                                                    </div>
+                                                    
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text" id="basic-addon2"></span>
+                                                    </div>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Transfer To</span>
+                                                        <input type="text" id="TransferTo" list="names" class="form-control text-dark" placeholder="Enter the First Name" aria-label="username2" aria-describedby="basic-addon2">
+                                                        <datalist id="names">
+                                                          <option value="Gokul Kumar">
+                                                          <option value="Naina Upadhyay">
+                                                          <option value="Mahendra Singh">
+                                                          <option value="Anjali Saini">
+                                                          <option value="Arun">
+                                                          <option value="Pranev Kumar">
+                                                          <option value="Pavithra">
+                                                          <option value="Ajith Kumar">
+                                                          <option value="Abhi Kumar">
+                                                          <option value="Madhu">
+                                                        </datalist>
+                                                    </div>                                                    
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text" id="basic-addon2"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Rs.</span>
+                                                        <input type="text" id="enterAmount" class="form-control text-dark" placeholder="Amount" aria-label="Amount ">
+                                                    </div>
+                                                    
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text"></span>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-success" value="Send" data-dismiss="modal" onclick="sendMoney()">Sent</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tm-row">
+                                <div class="tm-col-left text-center">
+                                    <ul class="tm-bg-controls-wrapper">
+                                        <li class="tm-bg-control active" data-id="0"></li>
+                                        <li class="tm-bg-control" data-id="1"></li>
+                                        <li class="tm-bg-control" data-id="2"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tm-bg">
+                                <div class="tm-bg-left"></div>
+                                <div class="tm-bg-right"></div>
+                            </div>
+                </div>
+            </div>
+        </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="bg-light text-center text-lg-start">
+    <!-- Grid container -->
+    
+    <!-- Copyright -->
+    <section id=:"copyright">
+        <div class="text-center p-3" style="background-color: rgba(214,230,255)" >
+          © 2021 Copyright:
+          <p class="love">Made with <b>HARDWORK</b> by Abhinav B</p>
+        </div>
+    <!-- Copyright -->
+  </footer>
+    <script src="script.js"></script> 
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+</body>
+</html>
